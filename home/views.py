@@ -39,7 +39,7 @@ def handleSignUp(request):
         pass2=request.POST['pass2']
 
         # check for errorneous input
-        if len(username)<10:
+        if len(username)>10:
             messages.error(request, " Your user name must be under 10 characters")
             return redirect('home')
 
